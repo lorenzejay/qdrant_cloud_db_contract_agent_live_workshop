@@ -1,0 +1,29 @@
+---
+retrieve_contracts_task:
+  description: >
+    Retrieve contracts from the vector database using QdrantVectorSearchTool
+    Focus on extracting the necessary data for specific clauses that need analysis.
+    You need to retreve relevant contracts from the vector database based on the query: {query} and {specific_clauses}
+  expected_output: A dataset containing all relevant contracts with specific clauses
+    extracted, ready for analysis.
+  async_execution: false
+  agent: data_retrieval_analysis_specialist
+analyze_clauses_task:
+  description: Use {specific_clauses} to analyze conflicts of interest, similarities,
+    and differences within the retrieved contracts.
+  expected_output: A detailed analysis report highlighting conflicts of interest,
+    similarities, and differences within the specific clauses of the contracts.
+  async_execution: false
+  agent: data_retrieval_analysis_specialist
+  context:
+  - retrieve_contracts_task
+generate_report_task:
+  description: Generate a report detailing findings with sources using the analysis
+    from Task 2. Ensure to provide the specific clauses that were analyzed, show which section and pinpoint which file this came from.
+  expected_output: A comprehensive report that includes detailed findings of conflicts,
+    similarities, differences, and sources for the analyzed contract clauses.
+  async_execution: false
+  agent: report_generation_specialist
+  context:
+  - analyze_clauses_task
+  output_file: report.md

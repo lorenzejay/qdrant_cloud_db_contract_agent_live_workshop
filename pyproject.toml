@@ -1,0 +1,22 @@
+[project]
+name = "analyzing_contract_clauses_for_conflicts_and_similarities"
+version = "0.1.0"
+description = "analyzing_contract_clauses_for_conflicts_and_similarities using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0",
+    "docling>=2.15.1",
+    "qdrant-client[fastembed]>=1.13.2",
+]
+
+[project.scripts]
+analyzing_contract_clauses_for_conflicts_and_similarities = "analyzing_contract_clauses_for_conflicts_and_similarities.main:run"
+run_crew = "analyzing_contract_clauses_for_conflicts_and_similarities.main:run"
+train = "analyzing_contract_clauses_for_conflicts_and_similarities.main:train"
+replay = "analyzing_contract_clauses_for_conflicts_and_similarities.main:replay"
+test = "analyzing_contract_clauses_for_conflicts_and_similarities.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
