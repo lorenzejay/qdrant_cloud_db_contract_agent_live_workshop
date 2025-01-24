@@ -113,13 +113,3 @@ class QdrantVectorSearchTool(BaseTool):
             results.append(result)
 
         return json.dumps(results, indent=2)
-
-
-if __name__ == "__main__":
-    tool = QdrantVectorSearchTool(
-        qdrant_url=os.environ.get("QDRANT_URL"),
-        qdrant_api_key=os.environ.get("QDRANT_API_KEY"),
-        collection_name="netflix_data_system_2",
-    )
-    result = tool.run("Find me similar shows to How I Met Your Mother?")
-    print("result", result)
