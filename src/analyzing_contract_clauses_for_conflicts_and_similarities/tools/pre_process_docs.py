@@ -25,9 +25,7 @@ for filename in os.listdir(pdf_folder):
         pdf_path = os.path.join(pdf_folder, filename)
         print(f"Processing {pdf_path}")
 
-        # Use Docling's DocumentConverter to convert PDF into a document
         result = doc_converter.convert(pdf_path)  # Direct PDF conversion
-        # print("result", result)
 
         # Chunk the converted document
         for chunk in HybridChunker().chunk(result.document):
@@ -35,20 +33,20 @@ for filename in os.listdir(pdf_folder):
             documents.append(chunk.text)
             metadatas.append(chunk.meta.export_json_dict())
 # Upload the documents to Qdrant
-# _ = client.add(
-#     collection_name=COLLECTION_NAME,
-#     documents=documents,
-#     metadata=metadatas,
-#     batch_size=64,
-# )
+_ = client.add(
+    collection_name=COLLECTION_NAME,
+    documents=documents,
+    metadata=metadatas,
+    batch_size=64,
+)
 # Retrieve and print results from Qdrant
-# points = client.query(
-#     collection_name=COLLECTION_NAME,
-#     query_text="What is the grants to rights of digital cinema destinations corp?",
-#     limit=10,
-# )
+points = client.query(
+    collection_name=COLLECTION_NAME,
+    query_text="What is the grants to rights of digital cinema destinations corp?",
+    limit=10,
+)
 
-# for i, point in enumerate(points):
-#     print(f"=== {i} ===")
-#     print(point.document)
-#     print()
+for i, point in enumerate(points):
+    print(f"=== {i} ===")
+    print(point.document)
+    print()
