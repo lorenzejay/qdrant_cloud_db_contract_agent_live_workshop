@@ -139,7 +139,6 @@ source = { editable = "." }
 dependencies = [
     { name = "crewai", extra = ["tools"] },
     { name = "docling" },
-    { name = "fastembed" },
     { name = "qdrant-client", extra = ["fastembed"] },
 ]
 
@@ -147,7 +146,6 @@ dependencies = [
 requires-dist = [
     { name = "crewai", extras = ["tools"], specifier = "==0.100.0" },
     { name = "docling", specifier = ">=2.15.1" },
-    { name = "fastembed", specifier = ">=0.5.1" },
     { name = "qdrant-client", extras = ["fastembed"], specifier = ">=1.13.2" },
 ]
 

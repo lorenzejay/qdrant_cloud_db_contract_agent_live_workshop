@@ -66,6 +66,7 @@ class QdrantVectorSearchTool(BaseTool):
                 url=self.qdrant_url,
                 api_key=self.qdrant_api_key,
             )
+            self.client.set_model("BAAI/bge-small-en-v1.5")
 
     def _run(
         self,
@@ -112,3 +113,12 @@ class QdrantVectorSearchTool(BaseTool):
             results.append(result)
 
         return json.dumps(results, indent=2)
+
+
+# if __name__ == "__main__":
+#     tool = QdrantVectorSearchTool(
+#         collection_name="contracts_business",
+#         qdrant_url=os.getenv("QDRANT_URL"),
+#         qdrant_api_key=os.getenv("QDRANT_API_KEY"),
+#     )
+#     print(tool.run("What is the grants to rights of digital cinema destinations corp?"))
