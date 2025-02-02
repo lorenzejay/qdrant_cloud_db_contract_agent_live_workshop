@@ -25,7 +25,7 @@ for filename in os.listdir(pdf_folder):
         pdf_path = os.path.join(pdf_folder, filename)
         print(f"Processing {pdf_path}")
 
-        result = doc_converter.convert(pdf_path)  # Direct PDF conversion
+        result = doc_converter.convert(pdf_path)
 
         # Chunk the converted document
         for chunk in HybridChunker().chunk(result.document):
