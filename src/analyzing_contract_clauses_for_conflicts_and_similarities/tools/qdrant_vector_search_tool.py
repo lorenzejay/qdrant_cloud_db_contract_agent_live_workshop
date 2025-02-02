@@ -66,7 +66,6 @@ class QdrantVectorSearchTool(BaseTool):
                 url=self.qdrant_url,
                 api_key=self.qdrant_api_key,
             )
-        self.client.set_model("BAAI/bge-small-en-v1.5")
 
     def _run(
         self,
