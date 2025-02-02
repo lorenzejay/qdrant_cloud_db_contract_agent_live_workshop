@@ -29,6 +29,12 @@ class AnalyzingContractClausesForConflictsAndSimilaritiesCrew:
         )
 
     @agent
+    def source_citer_specialist(self) -> Agent:
+        return Agent(
+            config=self.agents_config["source_citer_specialist"],
+        )
+
+    @agent
     def report_generation_specialist(self) -> Agent:
         return Agent(
             config=self.agents_config["report_generation_specialist"],
@@ -42,9 +48,9 @@ class AnalyzingContractClausesForConflictsAndSimilaritiesCrew:
         )
 
     @task
-    def analyze_clauses_task(self) -> Task:
+    def source_citer_task(self) -> Task:
         return Task(
-            config=self.tasks_config["analyze_clauses_task"],
+            config=self.tasks_config["source_citer_task"],
         )
 
     @task
@@ -57,8 +63,8 @@ class AnalyzingContractClausesForConflictsAndSimilaritiesCrew:
     def crew(self) -> Crew:
         """Creates the AnalyzingContractClausesForConflictsAndSimilarities crew"""
         return Crew(
-            agents=self.agents,  # Automatically created by the @agent decorator
-            tasks=self.tasks,  # Automatically created by the @task decorator
+            agents=self.agents,
+            tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
         )

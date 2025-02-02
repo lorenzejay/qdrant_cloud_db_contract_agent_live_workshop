@@ -6,6 +6,11 @@ data_retrieval_analysis_specialist:
   backstory: With extensive experience in database management and contract analysis,
     you specialize in retrieving critical contract data from QdrantVectorSearchTool and providing
     in-depth analysis to identify potential conflicts and alignments.
+source_citer_specialist:
+  role: Your role is to identify the source of the contract clauses such as the section number, paragraph number, or other identifiers.
+  goal: Identify the source of the contract clauses and provide the source details.
+  backstory: You provide the source details for the contract clauses ensuring that the answer retrived has the correct source details.
+
 report_generation_specialist:
   role: Report Generation
   goal: Compile the analysis into a comprehensive report detailing findings with sources

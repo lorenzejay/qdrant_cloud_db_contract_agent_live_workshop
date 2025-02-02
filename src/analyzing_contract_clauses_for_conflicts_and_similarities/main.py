@@ -4,19 +4,13 @@ from analyzing_contract_clauses_for_conflicts_and_similarities.crew import (
     AnalyzingContractClausesForConflictsAndSimilaritiesCrew,
 )
 
-# This main file is intended to be a way for your to run your
-# crew locally, so refrain from adding unnecessary logic into this file.
-# Replace with inputs you want to test with, it will automatically
-# interpolate any tasks and agents information
-
 
 def run():
     """
     Run the crew.
     """
     inputs = {
-        "question": "What are the differences in how contracts define warranties within creditcardscominc and digitalcinemadestination",
-        "specific_clauses": "Confidentiality",
+        "query": "What are the differences in how contracts define warranties within creditcardscominc and digitalcinemadestination",
     }
     AnalyzingContractClausesForConflictsAndSimilaritiesCrew().crew().kickoff(
         inputs=inputs
