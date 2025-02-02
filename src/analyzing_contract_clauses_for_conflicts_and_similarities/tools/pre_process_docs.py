@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 # Setup Qdrant client
-COLLECTION_NAME = "contracts_business"
+COLLECTION_NAME = "contracts_business_2"
 doc_converter = DocumentConverter(allowed_formats=[InputFormat.PDF])  # Allow PDF format
 qdrant_url = os.getenv("QDRANT_URL")
 qdrant_api_key = os.getenv("QDRANT_API_KEY")
 
 client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
-# client.set_model("BAAI/bge-small-en-v1.5")
+client.set_model("sentence-transformers/all-MiniLM-L6-v2")
 # client.set_sparse_model("Qdrant/bm25")
 # Define the folder where PDFs are stored
 pdf_folder = "knowledge/contracts/"

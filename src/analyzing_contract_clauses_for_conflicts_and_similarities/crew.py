@@ -16,7 +16,7 @@ class AnalyzingContractClausesForConflictsAndSimilaritiesCrew:
     """AnalyzingContractClausesForConflictsAndSimilarities crew"""
 
     vector_search_tool = QdrantVectorSearchTool(
-        collection_name="contracts_business",
+        collection_name="contracts_business_2",
         qdrant_url=os.getenv("QDRANT_URL"),
         qdrant_api_key=os.getenv("QDRANT_API_KEY"),
     )
