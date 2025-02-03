@@ -144,7 +144,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "crewai", extras = ["tools"], specifier = "==0.100.0" },
+    { name = "crewai", extras = ["tools"], specifier = "==0.100.1" },
     { name = "docling", specifier = ">=2.15.1" },
     { name = "qdrant-client", extras = ["fastembed"], specifier = ">=1.13.2" },
 ]
@@ -572,7 +572,7 @@ wheels = [
 
 [[package]]
 name = "crewai"
-version = "0.100.0"
+version = "0.100.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "appdirs" },
@@ -599,9 +599,9 @@ dependencies = [
     { name = "tomli-w" },
     { name = "uv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/3e/801ef36c0aa0db616494a0ea9e04992faee66b9c4811479cab2bf49b22cf/crewai-0.100.0.tar.gz", hash = "sha256:d703b374f6e786bc7c19b8c4fa74c86f1ca14fd045a91bee299f4df5f9f18783", size = 7759073 }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/5c/f476e790c0c1ec3b68cb1ea4b47e783de66436c24d77764ebc8749ba074e/crewai-0.100.1.tar.gz", hash = "sha256:e0a884d4462f85133fb92922cf29eec30d81256768b51505c9b4cd37e70715f0", size = 7774570 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/14/dc/4f914d063bc5787906d7871d558fb7e778079f7db77424a46611bac32b1f/crewai-0.100.0-py3-none-any.whl", hash = "sha256:9d8ba89d44c76c591d05ba25eb5373175ca61e1616fb862d149589ba8ade4ab1", size = 233188 },
+    { url = "https://files.pythonhosted.org/packages/d2/72/5eefd0f1a605a4167b278afb8b1eae731730e2726436890774967b0a6bee/crewai-0.100.1-py3-none-any.whl", hash = "sha256:50663f122ce6b4efa3dcd16b409ae93276ec67bd81c804e9d6794c6948d2b2ca", size = 234999 },
 ]
 
 [package.optional-dependencies]
@@ -2181,7 +2181,7 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.57.4"
+version = "1.59.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -2196,9 +2196,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "tokenizers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1a/9a/115bde058901b087e7fec1bed4be47baf8d5c78aff7dd2ffebcb922003ff/litellm-1.57.4.tar.gz", hash = "sha256:747a870ddee9c71f9560fc68ad02485bc1008fcad7d7a43e87867a59b8ed0669", size = 6304427 }
+sdist = { url = "https://files.pythonhosted.org/packages/86/b0/c8ec06bd1c87a92d6d824008982b3c82b450d7bd3be850a53913f1ac4907/litellm-1.59.8.tar.gz", hash = "sha256:9d645cc4460f6a9813061f07086648c4c3d22febc8e1f21c663f2b7750d90512", size = 6428607 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9f/72/35c8509cb2a37343c213b794420405cbef2e1fdf8626ee981fcbba3d7c5c/litellm-1.57.4-py3-none-any.whl", hash = "sha256:afe48924d8a36db801018970a101622fce33d117fe9c54441c0095c491511abb", size = 6592126 },
+    { url = "https://files.pythonhosted.org/packages/b9/38/889da058f566ef9ea321aafa25e423249492cf2a508dfdc0e5acfcf04526/litellm-1.59.8-py3-none-any.whl", hash = "sha256:2473914bd2343485a185dfe7eedb12ee5fda32da3c9d9a8b73f6966b9b20cf39", size = 6716233 },
 ]
 
 [[package]]
